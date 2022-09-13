@@ -7,17 +7,15 @@ const sumAll = function(x, y) {
     console.log(range)
     // 1 + 2 + 3 + 4 = 15
 
-    var startingNumber = range[0]
-    var endingNumber = range[1]
+    var min = range[0]
+    var max = range[1]
 
-    if (startingNumber < 0 || endingNumber < 0 || // Negative numbers
-        typeof startingNumber != 'number' || typeof endingNumber != 'number') { // Value type is not int
-        return('ERROR')
-    }
+    if (min < 0 || max < 0) return "ERROR";  // Negative numbers
+    if (!Number.isInteger(min) || !Number.isInteger(max)) return 'ERROR'; // Non-integers
 
     var sum = 0;
 
-    for (let i=startingNumber; i <= endingNumber; i++) {
+    for (let i=min; i <= max; i++) {
         sum += i;
     }
     console.log(sum)

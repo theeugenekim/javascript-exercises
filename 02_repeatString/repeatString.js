@@ -1,5 +1,4 @@
 const repeatString = function(string, num) {
-    var repeated_string = '';
     // Edge-case fallback
     if (num < 0) {
         return("ERROR")
@@ -8,6 +7,8 @@ const repeatString = function(string, num) {
     }
 
     // Function call
+    var repeated_string = '';
+
     for (let i = 0; i < num; i++) {
         repeated_string += string;
     }

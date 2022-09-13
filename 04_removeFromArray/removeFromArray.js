@@ -24,5 +24,12 @@ function removeFromArray(array, remove) {
     return filteredArray;
   };
 
+// Cleaner way
+function removeFromArray(...args) {
+    const array = args[0];
+    return array.filter(excludeValue => !args.includes(excludeValue));
+}
+
+
 // Do not edit below this line
 module.exports = removeFromArray;
